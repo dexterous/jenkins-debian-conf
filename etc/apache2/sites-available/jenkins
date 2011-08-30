@@ -1,0 +1,13 @@
+<VirtualHost *:80>
+
+    # Possible values include: debug, info, notice, warn, error, crit,
+    # alert, emerg.
+    LogLevel warn
+
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+    JkMount /jenkins   ajp13
+    JkMount /jenkins/* ajp13
+
+</VirtualHost>
