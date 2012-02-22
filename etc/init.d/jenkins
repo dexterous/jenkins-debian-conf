@@ -19,7 +19,7 @@ case $CMD in
             --prefix=$PREFIX \
             --logfile=/var/log/jenkins.log \
             --httpPort=-1 \
-            --ajpListenAddress=127.0.0.1 \
+            --ajp13ListenAddress=127.0.0.1 \
             </dev/null >>/var/log/jenkins.log 2>&1 &
 
         JENKINS_PID=$!
